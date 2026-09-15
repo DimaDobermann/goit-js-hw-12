@@ -53,6 +53,11 @@ form.addEventListener('submit', async event => {
 
     if (page < totalPages) {
       showLoadMoreButton();
+    } else {
+      iziToast.info({
+        message: "We're sorry, but you've reached the end of search results.",
+        position: 'topRight',
+      });
     }
   } catch (error) {
     iziToast.error({
